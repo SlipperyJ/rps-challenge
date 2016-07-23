@@ -1,1 +1,9 @@
-<h1>Hello Wurld!</h1>
+<form action="name_entry" method="post">
+  <input type="text" name="player">
+  <input type="submit" value="Submit">
+</form>
+
+
+<% if @player %>
+<%= @player.name %>
+<% end %>
