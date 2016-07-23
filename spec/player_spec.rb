@@ -6,4 +6,10 @@ describe Player do
   it "has a name" do
     expect(player.name).to eq "Ross"
   end
+
+  #context "#Move" do
+  #  it "has a rock move" do
+  #    player.move("rock")
+  #  end
+  #end
 end
