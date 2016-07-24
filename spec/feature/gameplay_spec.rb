@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "Gameplay" do
   scenario "when a player plays a game" do
-    allow_any_instance_of(Game).to receive(:results).and_return("Win")
+    #allow_any_instance_of(Game).to receive(:results).and_return("Win")
     visit "/"
     fill_in :player, with: "M0UNT41NDEW420"
     click_button "Submit"

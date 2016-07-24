@@ -6,7 +6,9 @@
 <br>
 <h2>Play again!</h2>
 <form action="move" method="post" >
-  <input type="submit" name="chosen_move" value="Rock">
-  <input type="submit" name="chosen_move" value="Paper">
-  <input type="submit" name="chosen_move" value="Scissors">
+<% Game::MOVE_LIST.each do |move| %>
+  <%= "<input type='submit' name='chosen_move' value='#{move}'>" %>
+<% end %>
 </form>
+<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Rock_Paper_Scissors_Lizard_Spock_en.svg/400px-Rock_Paper_Scissors_Lizard_Spock_en.svg.png" />
