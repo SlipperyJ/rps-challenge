@@ -15,17 +15,17 @@ enable :sessions
   end
 
   get '/game' do
-    session[:game] = Game.new
     erb(:game)
   end
 
   post '/move' do
-    session[:game].move(params[:chosen_move])
+    p session[:game] = Game.new(params[:chosen_move])
     redirect '/game_over'
   end
 
   get '/game_over' do
-    @game = session[:game]
+    @game   = session[:game]
+    @player = session[:player]
     erb(:game_over)
   end
 
