@@ -6,5 +6,6 @@ feature "Gameplay" do
     fill_in :player, with: "M0UNT41NDEW420"
     click_button "Submit"
     click_button('Rock')
+    expect(page).to have_content("You chose Rock")
   end
 end

@@ -15,8 +15,18 @@ enable :sessions
   end
 
   get '/game' do
-    @game = Game.new
+    session[:game] = Game.new
     erb(:game)
+  end
+
+  post '/move' do
+    session[:game].move(params[:chosen_move])
+    redirect '/game_over'
+  end
+
+  get '/game_over' do
+    @game = session[:game]
+    erb(:game_over)
   end
 
   # start the server if ruby file executed directly
