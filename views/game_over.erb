@@ -1,4 +1,12 @@
-<h1><%= @player.name %>, You chose <%= @game.current_move %></h1>
+<h3><%= @player.name %>, You chose <%= @game.current_move %></h3>
 <br>
-<h1>The computer chose <%= @game.computers_move %></h1>
-<h1> You <%= 
+<h3>The computer chose <%= @game.computers_move %></h3>
+<h1> You <%= @game.results %></h1>
+<br>
+<br>
+<h2>Play again!</h2>
+<form action="move" method="post" >
+  <input type="submit" name="chosen_move" value="Rock">
+  <input type="submit" name="chosen_move" value="Paper">
+  <input type="submit" name="chosen_move" value="Scissors">
+</form>

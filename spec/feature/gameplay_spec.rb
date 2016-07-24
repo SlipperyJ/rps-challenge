@@ -9,6 +9,6 @@ feature "Gameplay" do
     click_button('Rock')
     expect(page).to have_content("You chose Rock")
     expect(page).to have_content("The computer chose")
-    #expect(page).to have_content("Win")
+    expect(page).to have_content("Win")
   end
 end

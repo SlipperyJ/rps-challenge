@@ -1,14 +1,11 @@
 class Game
+MOVE_LIST = %w( Rock Paper Scissors )
 
-  attr_reader :move_list, :current_move, :computers_move, :game_logic
+  attr_reader :current_move, :computers_move, :game_logic
 
-  def initialize(move)
-    @move_list = ["Rock", "Paper", "Scissors"]
+  def initialize(move, computer_move = MOVE_LIST.sample)
     @current_move = move
-  end
-
-  def computer_turn
-    @computers_move = @move_list.sample
+    @computers_move = computer_move
   end
 
   def results
