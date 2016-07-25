@@ -19,7 +19,7 @@ enable :sessions
   end
 
   post '/move' do
-    p session[:game] = Game.new(params[:chosen_move])
+    session[:game] = Game.new(params[:chosen_move])
     redirect '/game_over'
   end
 
